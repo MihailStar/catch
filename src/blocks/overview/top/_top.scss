@@ -1,0 +1,173 @@
+.top {
+  overflow: hidden;
+
+  &__column {
+    &_start {
+      padding-top: 0;
+      padding-bottom: 4px;
+      @include grid-col(
+        (
+          xs: 12,
+          sm: null,
+          md: null,
+          lg: 5,
+          xl: null,
+        )
+      );
+      @include media('>=lg') {
+        padding-top: (10px + 38);
+        padding-bottom: 0;
+      }
+      @include media('>=1300px') {
+        padding-top: 200px;
+      }
+    }
+
+    &_end {
+      padding-top: 10px;
+      padding-bottom: 66px;
+      @include grid-col(
+        (
+          xs: 12,
+          sm: null,
+          md: null,
+          lg: 7,
+          xl: null,
+        )
+      );
+      @include media('>=sm') {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  &__discription {
+    position: relative;
+    display: block;
+    margin-top: 0;
+    margin-bottom: 8px;
+    text-align: right;
+    @include media('>=lg') {
+      margin-bottom: 10px;
+    }
+
+    span {
+      $font-size: 22px;
+      position: relative;
+      right: -14px;
+      display: inline-block;
+      padding-top: 1px;
+      padding-right: 14px;
+      padding-left: 14px;
+      border-radius: 4px 0 0 4px;
+      background-color: #f32735;
+      color: #fbfbfb;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: $font-size - 4;
+      font-family: 'Mont', sans-serif;
+      line-height: (32px / $font-size * 1em);
+      @include media('>=sm') {
+        font-size: $font-size - 3;
+      }
+      @include media('>=md') {
+        font-size: $font-size - 2;
+      }
+      @include media('>=lg') {
+        font-size: $font-size - 1;
+      }
+      @include media('>=xl') {
+        font-size: $font-size;
+      }
+    }
+  }
+
+  &__title {
+    $font-size: 41px;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #161615;
+    text-align: right;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: ($font-size - 19);
+    font-family: 'Mont', sans-serif;
+    line-height: (40px / $font-size * 1em);
+    @include text-truncate;
+    @include media('>=sm') {
+      font-size: ($font-size - 15);
+    }
+    @include media('>=md') {
+      font-size: ($font-size - 10);
+    }
+    @include media('>=lg') {
+      font-size: ($font-size - 5);
+    }
+    @include media('>=xl') {
+      font-size: $font-size;
+    }
+  }
+
+  &__image {
+    position: relative;
+    padding-right: 4px;
+    max-width: 100%;
+    width: 735px;
+    height: auto;
+    @include media('>=lg') {
+      padding-right: 7px;
+    }
+    @include media('>=xl') {
+      padding-right: 0;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 1px solid #979797;
+    }
+
+    &::before {
+      position: absolute;
+      top: -4px;
+      right: 0;
+      bottom: 4px;
+      left: 4px;
+      z-index: -1;
+      border-radius: 4px;
+      background-color: #f32735;
+      content: '';
+      @include media('>=lg') {
+        top: -7px;
+        bottom: 7px;
+        left: 7px;
+      }
+      @include media('>=xl') {
+        top: -8px;
+        right: -7px;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      right: -14px;
+      bottom: -66px;
+      left: -14px;
+      height: 88px;
+      background-image: url('../images/pattern.svg');
+      background-position: 100% 0;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      content: '';
+      @include media('>=sm') {
+        right: 0;
+        bottom: 38px;
+        left: auto;
+        width: (1069px / 735px * 100%);
+        height: (130px / 471px * 100%);
+        content: '';
+      }
+    }
+  }
+}

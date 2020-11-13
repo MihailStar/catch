@@ -1,0 +1,182 @@
+main.case-new-main
+  .grid
+    .grid__row
+      .case-new-main__column.case-new-main__column_center
+        img.case-new-main__image(
+          width='1180'
+          height='694'
+          srcset='./images/content/case-new-guideline-mockup.jpg 1x, \
+                  ./images/content/case-new-guideline-mockup@2x.jpg 1.5x'
+          src='./images/content/case-new-guideline-mockup.jpg'
+          alt='Lorem ipsum dolor sit amet'
+          data-aos='fade-up'
+        )
+        p.case-new-main__text(data-aos='fade-up').
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+          varius tortor nibh, sit amet tempor nibh finibus et. Aenean eu enim
+          justo. Vestibulum aliquam hendrerit molestie. Mauris malesuada nisi
+          sit amet augue accumsan tincidunt. Maecenas tincidunt, velit ac
+          porttitor pulvinar, tortor eros facilisis libero, vitae commodo nunc
+          quam et ligula. Ut nec ipsum sapien. Interdum et malesuada fames ac
+          ante ipsum primis in faucibus. Integer id nisi nec nulla luctus
+          lacinia non eu turpis. Etiam in ex imperdiet justo tincidunt
+          egestas. Ut porttitor urna ac augue cursus tincidunt sit amet sed
+          orci.
+
+        section.case-new-main__section.case-new-main__section_logotype(
+          data-aos='fade-up'
+        )
+          h2.case-new-main__subtitle Logo
+          img.case-new-main__image(
+            width='1180'
+            height='635'
+            srcset='./images/content/case-new-logotype-mockup.jpg 1x, \
+                    ./images/content/case-new-logotype-mockup@2x.jpg 1.5x'
+            src='./images/content/case-new-logotype-mockup.jpg'
+            alt='Lorem ipsum dolor sit amet'
+          )
+          p.case-new-main__text.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+            varius tortor nibh, sit amet tempor nibh finibus et. Aenean eu
+            enim justo. Vestibulum aliquam hendrerit molestie.
+
+        .case-new-main__section.case-new-main__section_images(
+          data-aos='fade-up'
+        )
+          .case-new-main__column(
+            class=[
+              'case-new-main__column_left',
+              'case-new-main__column_left-images'
+            ]
+          )
+            img.case-new-main__image.case-new-main__image_with-border(
+              width='554'
+              height='780'
+              srcset='./images/content/case-new-rectangle-1.jpg 1x, \
+                      ./images/content/case-new-rectangle-1@2x.jpg 1.5x'
+              src='./images/content/case-new-rectangle-1.jpg'
+              alt='Lorem ipsum dolor sit amet'
+            )
+          .case-new-main__column(
+            class=[
+              'case-new-main__column_right',
+              'case-new-main__column_right-images'
+            ]
+          )
+            img.case-new-main__image.case-new-main__image_with-border(
+              width='540'
+              height='759'
+              srcset='./images/content/case-new-rectangle-2.jpg 1x, \
+                      ./images/content/case-new-rectangle-2@2x.jpg 1.5x'
+              src='./images/content/case-new-rectangle-2.jpg'
+              alt='Lorem ipsum dolor sit amet'
+            )
+
+        section.case-new-main__section.case-new-main__section_typography(
+          style='background-color: #000000; color: #ffffff;'
+          data-aos='fade-up'
+        )
+          -
+            var symbols = [
+              'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j',
+              'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
+              't', 'u', 'v', 'w', 'x', 'y', 'z'
+            ]
+          h2.case-new-main__subtitle Typography
+          .case-new-main__column(
+            class=[
+              'case-new-main__column_left',
+              'case-new-main__column_left-typography'
+            ]
+          )
+            .case-new-main__capital-letter Aa
+            .case-new-main__font-family Proxima Nova Regular
+            .case-new-main__font-letters
+              each symbol in symbols
+                span.case-new-main__font-letter= symbol.toUpperCase()
+          .case-new-main__column(
+            class=[
+              'case-new-main__column_right',
+              'case-new-main__column_right-typography'
+            ]
+          )
+            .case-new-main__font-family Proxima Nova Bold
+            .case-new-main__font-letters.case-new-main__font-letters_bold
+              each symbol in symbols
+                span.case-new-main__font-letter= symbol.toUpperCase()
+            .case-new-main__font-family Proxima Nova Regular
+            .case-new-main__font-example.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+              diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+
+        section.case-new-main__section.case-new-main__section_colour-palette(
+          data-aos='fade-up'
+        )
+          h2.case-new-main__subtitle Colour Palette
+          .case-new-main__column(
+            class=[
+              'case-new-main__column_left',
+              'case-new-main__column_left-colour-palette'
+            ]
+          )
+            .case-new-main__color-from-palette(
+              class='case-new-main__color-from-palette_1'
+              style='background-color: #c4b35f; color: #ffffff;'
+            ) Pantone 142C
+            .case-new-main__color-tone-from-palette(
+              style='background-color: #c8bb77;'
+            )
+            .case-new-main__color-tone-from-palette(
+              style='background-color: #ceca9e;'
+            )
+            .case-new-main__color-tone-from-palette(
+              style='background-color: #d3d5be;'
+            )
+          .case-new-main__column(
+            class=[
+              'case-new-main__column_right',
+              'case-new-main__column_right-colour-palette'
+            ]
+          )
+            .case-new-main__color-from-palette(
+              class='case-new-main__color-from-palette_2'
+              style='background-color: #0d1d2e; color: #ffffff;'
+            ) Pantone 440C
+            .case-new-main__color-from-palette(
+              class='case-new-main__color-from-palette_3'
+              style='background-color: #66768a; color: #ffffff;'
+            ) Pantone 424C
+            .case-new-main__color-tone-from-palette(
+              style='background-color: #78889b;'
+            )
+            .case-new-main__color-tone-from-palette(
+              style='background-color: #96a6b8;'
+            )
+            .case-new-main__color-tone-from-palette(
+              style='background-color: #aebdcf;'
+            )
+
+        img.case-new-main__image.case-new-main__image_with-border(
+          width='1180'
+          height='666'
+          srcset='./images/content/case-new-rectangle-3.jpg 1x, \
+                  ./images/content/case-new-rectangle-3@2x.jpg 1.5x'
+          src='./images/content/case-new-rectangle-3.jpg'
+          alt='Lorem ipsum dolor sit amet'
+          data-aos='fade-up'
+        )
+
+        hr.case-new-main__hr(data-aos='fade-up')
+
+        .case-new-main__next-project(data-aos='fade-up')
+          a.link.case-new-main__link-next-project(
+            href='javascript:void(0);'
+          ) Next Project
+          img.case-new-main__image.case-new-main__image_with-border(
+            width='1180'
+            height='434'
+            srcset='./images/content/case-new-rectangle-4.jpg 1x, \
+                    ./images/content/case-new-rectangle-4@2x.jpg 1.5x'
+            src='./images/content/case-new-rectangle-4.jpg'
+            alt='Lorem ipsum dolor sit amet'
+          )

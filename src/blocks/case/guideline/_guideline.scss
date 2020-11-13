@@ -1,0 +1,456 @@
+.guideline {
+  &__column {
+    &_left {
+      padding-top: 0;
+      padding-bottom: 0;
+      @include grid-col(
+        (
+          xs: 12,
+          sm: null,
+          md: null,
+          lg: 9,
+          xl: null,
+        )
+      );
+      @include media('>=xl') {
+        padding-top: 92px;
+        padding-bottom: 56px;
+      }
+    }
+
+    &_right {
+      display: none;
+      padding-top: 0;
+      padding-bottom: 0;
+      background-image: url('../images/lines-red.svg');
+      background-position: 50% 0;
+      background-repeat: no-repeat;
+      @include grid-col(
+        (
+          xs: 12,
+          sm: null,
+          md: null,
+          lg: null,
+          xl: 3,
+        )
+      );
+      @include media('>=xl') {
+        display: block;
+      }
+    }
+
+    &_start {
+      padding-top: 58px;
+      padding-bottom: 0;
+      @include grid-col(
+        (
+          xs: 12,
+          sm: null,
+          md: null,
+          lg: null,
+          xl: 8,
+        )
+      );
+      @include media('>=sm') {
+        padding-top: 30px;
+      }
+      @include media('>=lg') {
+        padding-top: 66px;
+      }
+      @include media('>=1300px') {
+        padding-top: 86px;
+        width: (100% / 12 * 7);
+      }
+    }
+
+    &_end {
+      display: flex;
+      flex-wrap: wrap;
+      padding-top: 0;
+      padding-bottom: 0;
+      @include grid-col(
+        (
+          xs: 12,
+          sm: null,
+          md: null,
+          lg: null,
+          xl: 4,
+        )
+      );
+      @include media('>=sm') {
+        flex-wrap: nowrap;
+      }
+      @include media('>=xl') {
+        display: block;
+      }
+      @include media('>=1300px') {
+        margin-left: (100% / 12 * 1);
+      }
+    }
+  }
+
+  &__figure {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+
+    img {
+      display: block;
+      margin-bottom: 0;
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #979797;
+      @include media('>=sm') {
+        margin-bottom: 8px;
+      }
+    }
+
+    figcaption {
+      $font-size: 15px;
+      display: block;
+      margin-top: 0;
+      margin-bottom: 0;
+      padding: 0 14px;
+      color: #161615;
+      text-align: right;
+      font-weight: 500;
+      font-size: $font-size - 2;
+      font-family: 'Mont', sans-serif;
+      line-height: normal;
+      @include media('>=sm') {
+        padding: 0;
+        text-align: left;
+        font-size: ($font-size - 1.5);
+      }
+      @include media('>=md') {
+        font-size: ($font-size - 1);
+      }
+      @include media('>=lg') {
+        font-size: ($font-size - 0.5);
+      }
+      @include media('>=xl') {
+        font-size: $font-size;
+      }
+    }
+
+    &_brand-guideline {
+      img {
+        width: 948px;
+        @include media('>=lg') {
+          border-radius: 7px;
+        }
+      }
+    }
+
+    &_business-card {
+      order: 0;
+      margin-bottom: 60px;
+      @include media('>=sm') {
+        order: 1;
+        margin-bottom: 0;
+        margin-left: 14px;
+        width: auto;
+      }
+      @include media('>=xl') {
+        order: 0;
+        margin-bottom: 44px;
+        margin-left: 0;
+      }
+
+      img {
+        width: 413px;
+      }
+    }
+
+    &_fact-sheet {
+      margin-bottom: 20px;
+      @include media('>=sm') {
+        margin-bottom: 0;
+      }
+
+      img {
+        width: 413px;
+      }
+    }
+  }
+
+  &__image {
+    position: relative;
+
+    &::before {
+      @include media('>=lg') {
+        position: absolute;
+        top: -5px;
+        right: -4px;
+        bottom: 5px;
+        left: 4px;
+        z-index: -1;
+        border-radius: 4px;
+        background-color: #f32735;
+        content: '';
+      }
+    }
+  }
+
+  &__title {
+    $font-size: 15px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0 14px;
+    color: #161615;
+    font-weight: 800;
+    font-size: $font-size;
+    font-family: 'Mont', sans-serif;
+    line-height: normal;
+    @include media('>=sm') {
+      padding: 0;
+      font-weight: 500;
+    }
+
+    &_colors {
+      margin-bottom: 14px;
+      @include media('>=sm') {
+        margin-bottom: 32px;
+      }
+      @include media('>=1300px') {
+        margin-bottom: 42px;
+      }
+    }
+
+    &_typography {
+      margin-bottom: 16px;
+      @include media('>=sm') {
+        margin-bottom: 22px;
+      }
+    }
+
+    span {
+      position: relative;
+      display: inline-block;
+      padding-right: 34px;
+
+      &::after {
+        position: absolute;
+        right: 0;
+        bottom: -5px;
+        left: 0;
+        height: 5px;
+        border-radius: 1px;
+        background-color: #000b8c;
+        content: '';
+      }
+    }
+  }
+}
+
+.colors {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0;
+    margin-right: -7px;
+    margin-bottom: 4px;
+    margin-left: -7px;
+    padding-right: 14px;
+    padding-left: 14px;
+    @include media('>=sm') {
+      margin-bottom: 30px;
+      padding-right: 0;
+      padding-left: 0;
+    }
+    @include media('>=lg') {
+      margin-bottom: 66px;
+    }
+  }
+
+  &__item {
+    display: block;
+    margin-bottom: 14px;
+    padding-right: 7px;
+    padding-left: 7px;
+    width: 50%;
+    @include media('>=md') {
+      margin-bottom: 0;
+      width: 25%;
+    }
+  }
+
+  &__color {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 86px;
+    border-radius: 4px;
+    @include media('>=sm') {
+      margin-bottom: 12px;
+      height: 210px;
+    }
+
+    b {
+      $font-size: 22px;
+      display: block;
+      margin-top: 0;
+      margin-bottom: 0;
+      font-weight: 500;
+      font-size: $font-size;
+      font-family: 'Mont', sans-serif;
+      line-height: normal;
+      @include media('>=md') {
+        display: none;
+      }
+    }
+  }
+
+  &__table {
+    display: none;
+    width: 100%;
+    border-collapse: collapse;
+    @include media('>=sm') {
+      display: table;
+    }
+  }
+
+  &__td {
+    $font-size: 13px;
+    padding: 4px;
+    color: #161615;
+    font-size: $font-size;
+    font-family: 'Mont', sans-serif;
+    line-height: 1em;
+
+    &:nth-child(1) {
+      padding-left: 0;
+      width: (100% / 3);
+      text-align: right;
+      font-weight: 800;
+    }
+
+    &:nth-child(2) {
+      padding-right: 0;
+      font-weight: 500;
+    }
+  }
+}
+
+.typography {
+  &__font {
+    margin-bottom: 20px;
+    @include media('>=sm') {
+      margin-bottom: 38px;
+    }
+  }
+
+  &__symbols {
+    $font-size: 22px;
+    padding: 0 14px;
+    color: #161615;
+    font-weight: 400;
+    font-size: $font-size - 4;
+    line-height: (28px / $font-size * 1em);
+    @include media('>=sm') {
+      margin-right: -7px;
+      margin-bottom: 10px;
+      margin-left: -7px;
+      padding: 0;
+      font-size: $font-size - 3;
+    }
+    @include media('>=md') {
+      font-size: $font-size - 2;
+    }
+    @include media('>=lg') {
+      font-size: $font-size - 1;
+    }
+    @include media('>=xl') {
+      font-size: $font-size;
+    }
+
+    &:nth-child(1) {
+      display: none;
+      @include media('>=sm') {
+        display: block;
+      }
+    }
+
+    &:nth-child(2) {
+      display: block;
+      @include media('>=sm') {
+        display: none;
+      }
+    }
+
+    &_ubuntu-condensed {
+      font-family: 'Ubuntu Condensed', sans-serif;
+    }
+
+    &_proxima-nova {
+      font-family: 'Proxima Nova', sans-serif;
+    }
+
+    span {
+      display: inline-block;
+      width: auto;
+      text-align: center;
+      @include media('>=sm') {
+        margin-bottom: 10px;
+        width: (100% / 26);
+      }
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 14px;
+    @include media('>=sm') {
+      display: block;
+      padding: 0;
+    }
+  }
+
+  &__title {
+    $font-size: 13px;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #000b8c;
+    font-weight: 800;
+    font-size: $font-size;
+    font-family: 'Mont', sans-serif;
+    line-height: normal;
+    @include media('>=sm') {
+      $font-size: 22px;
+      color: #161615;
+      text-align: right;
+      font-weight: 500;
+      font-size: $font-size;
+      line-height: (25px / $font-size * 1em);
+    }
+
+    &::after {
+      content: ' / ';
+      font-weight: 500;
+      @include media('>=sm') {
+        content: none;
+      }
+    }
+  }
+
+  &__description {
+    $font-size: 13px;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #000b8c;
+    font-weight: 500;
+    font-size: $font-size;
+    font-family: 'Mont', sans-serif;
+    line-height: normal;
+    @include media('>=sm') {
+      $font-size: 15px;
+      color: #161615;
+      text-align: right;
+      font-weight: 900;
+      font-size: $font-size;
+      line-height: 1em;
+    }
+  }
+}

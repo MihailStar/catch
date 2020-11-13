@@ -1,0 +1,22 @@
+header.case-new-header(data-aos='fade-up')
+  .grid
+    .grid__row
+      .case-new-header__column.case-new-header__column_center
+        h1.visually-hidden Orca Gold
+        .case-new-header__table-wrapper
+          table.case-new-header__table
+            -
+              var items = [
+                ['Client', 'Orca Gold'],
+                ['Categories', 'Branding'],
+                ['Location', 'Vancouver,<br>BC'],
+                ['Industry', 'Mining']
+              ]
+            tr
+              each item in items
+                - var [thText] = item
+                th.case-new-header__th= thText
+            tr
+              each item in items
+                - var [, tdText] = item
+                td.case-new-header__td!= tdText

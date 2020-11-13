@@ -1,0 +1,270 @@
+.contact {
+  &__column {
+    &_start {
+      padding-top: 54px;
+      padding-bottom: 0;
+      @include grid-offset(
+        (
+          xs: null,
+          sm: null,
+          md: null,
+          lg: null,
+          xl: 1,
+        )
+      );
+      @include grid-col(
+        (
+          xs: 12,
+          sm: null,
+          md: null,
+          lg: 6,
+          xl: 5,
+        )
+      );
+      @include media('>=md') {
+        padding-top: 106px;
+      }
+      @include media('>=lg') {
+        padding-bottom: 70px;
+      }
+    }
+
+    &_end {
+      padding-top: 14px;
+      padding-bottom: 14px;
+      @include grid-col(
+        (
+          xs: 12,
+          sm: null,
+          md: null,
+          lg: 6,
+          xl: 5,
+        )
+      );
+      @include media('>=md') {
+        padding-bottom: 70px;
+      }
+      @include media('>=lg') {
+        padding-top: 106px;
+      }
+    }
+  }
+
+  &__wrapper {
+    &_start {
+      margin-right: 0;
+      padding-top: 0;
+      padding-right: 14px;
+      padding-bottom: 65px;
+      padding-left: 14px;
+      height: 100%;
+      border-radius: 4px;
+      background-color: #cbd3eb;
+      @include media('>=md') {
+        padding-right: 20px;
+        padding-left: 20px;
+      }
+      @include media('>=lg') {
+        margin-right: -7px;
+        padding-bottom: 76px;
+        border-radius: 4px 0 0 4px;
+      }
+    }
+
+    &_end {
+      position: relative;
+      display: flex;
+      overflow: hidden;
+      align-content: flex-start;
+      flex-wrap: wrap;
+      margin-left: 0;
+      padding-top: 65px;
+      padding-right: 14px;
+      padding-bottom: 65px;
+      padding-left: 14px;
+      height: 100%;
+      border-radius: 4px;
+      background-color: #000b8c;
+      @include media('>=md') {
+        padding-right: 20px;
+        padding-left: 20px;
+      }
+      @include media('>=lg') {
+        margin-left: -7px;
+        padding-top: 168px;
+        padding-left: 30px;
+        border-radius: 0 4px 4px 0;
+      }
+      @include media('>=xl') {
+        padding-left: 32px;
+      }
+
+      &::after {
+        position: absolute;
+        bottom: -1px;
+        left: 26px;
+        width: 218px;
+        height: 74px;
+        background-color: transparent;
+        background-image: url('../images/waves.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        content: none;
+        transform: scaleX(-1) rotate(-90deg);
+        transform-origin: 0 100%;
+        @include media('>=xl') {
+          content: '';
+        }
+      }
+    }
+  }
+
+  &__title {
+    $font-size: 65px;
+    position: relative;
+    top: (-40px / $font-size * 1em);
+    margin-top: 0;
+    margin-bottom: (6px / $font-size * 1em);
+    color: #f32735;
+    text-transform: uppercase;
+    letter-spacing: (0.47px / $font-size * 1em);
+    font-weight: 900;
+    font-size: ($font-size - 8 * 4);
+    font-family: 'Mont', sans-serif;
+    line-height: (58px / $font-size * 1em);
+    @include media('>=md') {
+      font-size: ($font-size - 8 * 3);
+    }
+    @include media('>=lg') {
+      letter-spacing: (0.94px / $font-size * 1em);
+      font-size: ($font-size - 8 * 2);
+    }
+    @include media('>=xl') {
+      font-size: ($font-size - 8 * 1);
+    }
+    @include media('>=1300px') {
+      font-size: $font-size;
+    }
+  }
+
+  &__form {
+    background-color: #cbd3eb;
+    color: #161615;
+
+    .form__label_first-name,
+    .form__label_last-name {
+      $font-size: 13px;
+      @include media('>=xl') {
+        margin-bottom: (36px / $font-size * 1em);
+      }
+    }
+
+    .form__label_email {
+      $font-size: 13px;
+      @include media('>=xl') {
+        margin-bottom: (28px / $font-size * 1em);
+      }
+    }
+  }
+
+  &__subtitle {
+    $font-size: 65px;
+    position: absolute;
+    right: 18px;
+    bottom: (-18px + 8);
+    margin-top: 0;
+    margin-bottom: 0;
+    color: rgba(#fbfbfb, 0.3);
+    letter-spacing: (0.47px / $font-size * 1em);
+    font-weight: 800;
+    font-size: ($font-size - 8 * 4);
+    font-family: 'Mont', sans-serif;
+    line-height: (65px / $font-size * 1em);
+    @include media('>=md') {
+      bottom: (-18px + 6);
+      font-size: ($font-size - 8 * 3);
+    }
+    @include media('>=lg') {
+      bottom: (-18px + 4);
+      letter-spacing: (0.94px / $font-size * 1em);
+      font-size: ($font-size - 8 * 2);
+    }
+    @include media('>=xl') {
+      bottom: (-18px + 2);
+      font-size: ($font-size - 8 * 1);
+    }
+    @include media('>=1300px') {
+      bottom: -18px;
+      font-size: $font-size;
+    }
+  }
+
+  &__address {
+    margin-bottom: 46px;
+    width: 100%;
+    @include media('>=sm') {
+      width: 50%;
+    }
+  }
+
+  &__subsubtitle {
+    $font-size: 15px;
+    margin-top: 0;
+    margin-bottom: (6px / $font-size * 1em);
+    color: #fbfbfb;
+    font-weight: 500;
+    font-size: $font-size;
+    font-family: 'Mont', sans-serif;
+    line-height: normal;
+  }
+
+  &__text {
+    $font-size: 15px;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #fbfbfb;
+    letter-spacing: 0.125em;
+    font-weight: 800;
+    font-size: $font-size;
+    font-family: 'Mont', sans-serif;
+    line-height: 1.6em;
+  }
+
+  &__link {
+    color: inherit;
+    font: inherit;
+    transition: text-decoration-color $transition-duration;
+    text-decoration-color: transparent;
+
+    &:hover,
+    &:focus {
+      outline: none;
+      text-decoration-color: currentColor;
+    }
+  }
+
+  &__some-text {
+    $font-size: 22px;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 100%;
+    color: #fbfbfb;
+    font-weight: 600;
+    font-size: $font-size - 2;
+    font-family: 'Mont', sans-serif;
+    line-height: (28px / $font-size * 1em);
+    opacity: 0.6;
+    @include media('>=sm') {
+      font-size: $font-size - 1.5;
+    }
+    @include media('>=md') {
+      font-size: $font-size - 1;
+    }
+    @include media('>=lg') {
+      font-size: $font-size - 0.5;
+    }
+    @include media('>=xl') {
+      font-size: $font-size;
+    }
+  }
+}

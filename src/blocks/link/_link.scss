@@ -1,0 +1,67 @@
+.link {
+  $font-size: 18px;
+  position: relative;
+  display: inline-block;
+  min-height: (24px / $font-size * 1em);
+  color: #000b8c;
+  text-decoration: none;
+  letter-spacing: (0.26px / $font-size * 1em);
+  font-weight: 600;
+  font-size: $font-size;
+  font-family: 'Mont', sans-serif;
+  line-height: (24px / $font-size * 1em);
+
+  &::before,
+  &::after {
+    position: absolute;
+    right: 0;
+    left: 0;
+    content: '';
+    transition: opacity $transition-duration;
+  }
+
+  &::before {
+    bottom: 1px;
+    height: 2px;
+    background-color: #f32735;
+    opacity: 1;
+    transform: translateY(-50%);
+  }
+
+  &::after {
+    bottom: 0;
+    height: 6px;
+    background-color: transparent;
+    background-image: url('../images/wave.svg');
+    background-position: 0 50%;
+    background-repeat: repeat-x;
+    opacity: 0;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+
+    &::before {
+      opacity: 0;
+    }
+
+    &::after {
+      opacity: 0.5;
+    }
+  }
+
+  &:active {
+    &::before {
+      opacity: 1;
+    }
+
+    &::after {
+      opacity: 0;
+    }
+  }
+
+  &_invert {
+    color: #fbfbfb;
+  }
+}

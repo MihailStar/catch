@@ -1,0 +1,33 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.body {
+  $font-size: 18px;
+  margin: 0;
+  padding-top: 70px;
+  padding-left: 0;
+  background-color: #fff;
+  font-weight: 500;
+  font-style: normal;
+  font-size: $font-size;
+  font-family: 'Mont', sans-serif;
+  line-height: (22px / $font-size * 1em);
+  @include media('>=lg') {
+    padding-top: 0;
+    padding-left: 80px;
+  }
+  @include media('>=xl') {
+    padding-left: 84px;
+  }
+}
+
+.visually-hidden {
+  @include visually-hidden;
+}

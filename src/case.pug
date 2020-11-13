@@ -1,0 +1,27 @@
+extends ./templates/_base.pug
+
+block variables
+  - var pageName = 'case'
+  - var pageTitle = 'Case | Catch'
+
+block head
+  link(
+    href='./fonts/ubuntu-condensed-regular.woff2'
+    rel='preload'
+    as='font'
+    type='font/woff2'
+    crossorigin='anonymous'
+  )
+  link(
+    href='./fonts/proxima-nova-regular.woff2'
+    rel='preload'
+    as='font'
+    type='font/woff2'
+    crossorigin='anonymous'
+  )
+
+block body
+  include ./blocks/case/header/_header.pug
+  include ./blocks/case/brief/_brief.pug
+  include ./blocks/case/guideline/_guideline.pug
+  include ./blocks/case/connect/_connect.pug

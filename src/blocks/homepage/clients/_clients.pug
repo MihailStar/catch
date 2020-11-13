@@ -1,0 +1,39 @@
+section.clients(data-aos='fade-up')
+  .grid
+    .grid__row
+      .clients__column.clients__column_start
+        h2.clients__title Clients
+        q.clients__quote Testimonial text goes here.
+        span.clients__name Client Name
+        a.link.clients__link.clients__link_start(
+          href='javascript:void(0);'
+        ) All clients
+
+      .clients__column.clients__column_end
+        .clients__list
+          -
+            var items = [
+              'Luxxfolio',
+              'Orca-Gold',
+              'Goat',
+              'First-Cobalt',
+              'Medgold',
+              'Nighthawk'
+            ]
+          each item in items
+            .clients__item
+              img(
+                src=`./images/content/${item.toLowerCase()}.svg`
+                alt=`Logotype ${item}`
+              )
+        .clients-slider#clients-slider
+          each item in items
+            .clients-slider__slide
+              img(
+                src=`./images/content/${item.toLowerCase()}.svg`
+                alt=`Logotype ${item}`
+              )
+        footer.clients__footer
+          a.link.link_invert.clients__link.clients__link_end(
+            href='javascript:void(0);'
+          ) All clients

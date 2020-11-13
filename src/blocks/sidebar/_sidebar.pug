@@ -1,0 +1,53 @@
+.sidebar#sidebar(
+  class=['general', 'contact', 'overview', 'case', 'case-new'].some(
+    (item) => pageName === item
+  ) && 'sidebar_inner'
+)
+  .sidebar__column.sidebar__column_start
+    a.sidebar__logotype(
+      class=pageName === 'about-us' && 'sidebar__logotype_no-hover'
+      href='javascript:void(0);'
+    )
+      svg(
+        width='54'
+        height='42'
+        viewBox='0 0 54 42'
+        xmlns='http://www.w3.org/2000/svg'
+      )
+        path(
+          d='M27.308 22.179c0 3.94 1.524 7.39 4.036 9.812L21.86 41.55c-.596.6-1.563.6-2.159 0L.448 22.139a1.547 1.547 0 0 1 0-2.176L19.703.553c.595-.6 1.562-.6 2.158 0l10.713 10.8c-3.24 2.398-5.266 6.278-5.266 10.826zM41.116 22.14l-6.093 6.141c-1.488-1.518-2.394-3.662-2.394-6.09 0-3.05 1.416-5.646 3.642-7.112l4.845 4.884c.596.6.596 1.575 0 2.176z'
+        )/
+        path(
+          d='M40.634 13.797c3.313 0 6.102 1.782 7.44 4.73h5.18c-1.413-5.88-6.323-9.76-12.606-9.76-3.084 0-5.86.949-8.073 2.585l3.697 3.727c1.237-.816 2.726-1.282 4.362-1.282zm7.408 11.89c-1.386 3.118-4.08 4.926-7.408 4.926-2.217 0-4.181-.877-5.61-2.332l-3.68 3.71c2.368 2.285 5.615 3.654 9.29 3.654 6.277 0 11.281-3.969 12.68-9.957h-5.272z'
+        )/
+
+  .sidebar__column.sidebar__column_center
+    button.sidebar__navigation-button#navigation-button(type='button')
+      span.visually-hidden Navigation
+
+  .sidebar__column.sidebar__column_end
+    .sidebar__social-networks
+      -
+        var items = [
+          {
+            name: 'Facebook',
+            size: ['10', '22']
+          },
+          {
+            name: 'Instagram',
+            size: ['22', '22']
+          },
+          {
+            name: 'LinkedIn',
+            size: ['22', '22']
+          }
+        ]
+      each item in items
+        - var name = item.name
+        - var [ width, height ] = item.size
+        a.sidebar__social-network(
+          class=`sidebar__social-network_${name.toLowerCase()}`
+          href='javascript:void(0);'
+        )
+          +icon(name.toLowerCase())(width=width height=height)
+          span.visually-hidden= name

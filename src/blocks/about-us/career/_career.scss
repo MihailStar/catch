@@ -1,0 +1,110 @@
+.career {
+  position: relative;
+  overflow: hidden;
+  background-color: #000b8b;
+
+  &__column {
+    &_center {
+      padding-top: 68px;
+      padding-bottom: 102px;
+      @include grid-offset(
+        (
+          xs: null,
+          sm: null,
+          md: null,
+          lg: 1,
+          xl: 2,
+        )
+      );
+      @include grid-col(
+        (
+          xs: 12,
+          sm: null,
+          md: null,
+          lg: 10,
+          xl: 8,
+        )
+      );
+      @include media('>=lg') {
+        padding-top: 132px;
+        padding-bottom: 166px;
+      }
+
+      &::after {
+        $font-size: 125px;
+        position: absolute;
+        bottom: (-24px + 15);
+        left: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        width: 100%;
+        color: rgba(#fbfbfb, 0.3);
+        content: attr(data-text);
+        text-align: center;
+        letter-spacing: normal;
+        font-weight: 600;
+        font-size: $font-size - 90;
+        font-family: 'Mont', sans-serif;
+        line-height: 1em;
+        @include media('>=sm') {
+          bottom: (-24px + 12);
+          font-size: $font-size - 72;
+        }
+        @include media('>=md') {
+          bottom: (-24px + 9);
+          font-size: $font-size - 54;
+        }
+        @include media('>=lg') {
+          bottom: (-24px + 6);
+          letter-spacing: (1.81px / $font-size * 1em);
+          font-size: $font-size - 36;
+        }
+        @include media('>=xl') {
+          bottom: (-24px + 3);
+          font-size: $font-size - 18;
+        }
+        @include media('>=1300px') {
+          bottom: -24px;
+          left: -42px;
+          font-size: $font-size;
+        }
+      }
+    }
+  }
+
+  &__title {
+    $font-size: 22px;
+    margin-top: 0;
+    margin-bottom: (6px / $font-size * 1em);
+    color: #fbfbfb;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: $font-size - 2;
+    font-family: 'Mont', sans-serif;
+    line-height: (25px / $font-size * 1em);
+    @include media('>=sm') {
+      font-size: $font-size - 1.5;
+    }
+    @include media('>=md') {
+      font-size: $font-size - 1;
+    }
+    @include media('>=lg') {
+      font-size: $font-size - 0.5;
+    }
+    @include media('>=xl') {
+      margin-bottom: (4px / $font-size * 1em);
+      font-size: $font-size;
+    }
+  }
+
+  &__description {
+    $font-size: 15px;
+    margin-top: 0;
+    margin-bottom: (38px / $font-size * 1em);
+    color: #fbfbfb;
+    font-weight: 500;
+    font-size: $font-size;
+    font-family: 'Mont', sans-serif;
+    line-height: (19px / $font-size * 1em);
+  }
+}

@@ -1,0 +1,14 @@
+nav.navigation#navigation
+  ul.navigation__list
+    -
+      var items = [
+        'About Us',
+        'Our Work',
+        'Contact Us'
+      ]
+    each item in items
+      li.navigation__item
+        a.navigation__link(href='javascript:void(0);')= item
+  footer.navigation__footer
+    a.navigation__privacy-policy(href='javascript:void(0);') Privacy Policy
+    span.navigation__copyright 2019 © Catch Advisory Group

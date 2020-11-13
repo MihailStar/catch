@@ -1,0 +1,156 @@
+.header-overview {
+  &__column {
+    &_center {
+      padding-top: 54px;
+      padding-bottom: 46px;
+      @include grid-col(
+        (
+          xs: 12,
+          sm: null,
+          md: null,
+          lg: null,
+          xl: 11,
+        )
+      );
+      @include media('>=md') {
+        padding-top: 144px;
+        padding-bottom: 54px;
+      }
+    }
+  }
+
+  &__title {
+    $font-size: 65px;
+    margin-top: 0;
+    margin-bottom: (16px / $font-size * 1em);
+    color: #000b8c;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: (0.47px / $font-size * 1em);
+    font-weight: 900;
+    font-size: ($font-size - 8 * 4);
+    font-family: 'Mont', sans-serif;
+    line-height: (58px / $font-size * 1em);
+    @include media('>=sm') {
+      margin-bottom: (10px / $font-size * 1em);
+      text-align: center;
+    }
+    @include media('>=md') {
+      font-size: ($font-size - 8 * 3);
+    }
+    @include media('>=lg') {
+      letter-spacing: (0.94px / $font-size * 1em);
+      font-size: ($font-size - 8 * 2);
+    }
+    @include media('>=xl') {
+      font-size: ($font-size - 8 * 1);
+    }
+    @include media('>=1300px') {
+      font-size: $font-size;
+    }
+  }
+
+  &__description {
+    $font-size: 22px;
+    margin-top: 0;
+    margin-bottom: (22px / $font-size * 1em);
+    color: #161615;
+    text-align: left;
+    font-weight: 500;
+    font-size: $font-size - 4;
+    font-family: 'Mont', sans-serif;
+    line-height: (28px / $font-size * 1em);
+    @include media('>=sm') {
+      margin-bottom: (36px / $font-size * 1em);
+      text-align: center;
+      font-size: $font-size - 3;
+    }
+    @include media('>=md') {
+      font-size: $font-size - 2;
+    }
+    @include media('>=lg') {
+      font-size: $font-size - 1;
+    }
+    @include media('>=xl') {
+      font-size: $font-size;
+    }
+
+    br {
+      display: none;
+      @include media('>=sm') {
+        display: inline;
+      }
+    }
+  }
+
+  &__select {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    @include media('>=sm') {
+      max-width: 100%;
+      width: 306px;
+    }
+
+    select {
+      $font-size: 15px;
+      display: block;
+      padding-right: (12px + 34);
+      padding-left: 12px;
+      width: 100%;
+      height: 35px;
+      border: 2px solid #000b8c;
+      border-radius: 4px;
+      background-color: #fbfbfb;
+      color: #000b8c;
+      font-weight: 500;
+      font-size: $font-size;
+      font-family: 'Mont', sans-serif;
+      line-height: (20px / $font-size * 1em);
+      cursor: pointer;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+
+      &::-ms-expand {
+        display: none;
+      }
+
+      &:hover,
+      &:focus {
+        outline: none;
+
+        & + span {
+          background-color: #000b8c;
+
+          svg {
+            fill: #fbfbfb;
+          }
+        }
+      }
+    }
+
+    span {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 100%;
+      border: 2px solid #000b8c;
+      border-radius: 0 4px 4px 0;
+      background-color: #fbfbfb;
+      content: '';
+      transition: background-color $transition-duration;
+      pointer-events: none;
+
+      svg {
+        transition: fill $transition-duration;
+        transform: rotate(180deg);
+        fill: #000b8c;
+      }
+    }
+  }
+}

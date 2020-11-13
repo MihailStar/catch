@@ -1,0 +1,29 @@
+section.connect.connect_overview(data-aos='fade-up')
+  .grid
+    .grid__row
+      .connect__column.connect__column_start
+        h2.connect__title.connect__title_overview Dig what we do
+        p.connect__description.connect__description_overview.
+          Connect with us, we are excited <br> about your ideas and focused on <br> bringing them into tomorrow. <br>
+
+      .connect__column.connect__column_end
+        form.connect__form.connect__form_overview.form(action='/' method='post')
+          label.form__label.form__label_first-name
+            input.form__input.form__input_first-name(
+              type='text'
+              required
+            )
+            span First Name
+          label.form__label.form__label_last-name
+            input.form__input.form__input_last-name(
+              type='text'
+              required
+            )
+            span Last Name
+          label.form__label.form__label_email
+            input.form__input.form__input_email(
+              type='text'
+              required
+            )
+            span Email Address
+          button.form__submit(type='submit') Talk Soon

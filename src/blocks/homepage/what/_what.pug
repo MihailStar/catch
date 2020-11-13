@@ -1,0 +1,88 @@
+section.what(data-aos='fade-up')
+  .grid
+    .grid__row
+      .what__column.what__column_start
+        header.what__header
+          h2.what__title Services
+          p.what__description What We Do
+
+    .grid__row
+      .what__column.what__column_end
+        ul.what__list#what-list
+          -
+            var items = [
+              {
+                name: 'Branding & Collateral',
+                subitems: [
+                  'Brand Guidelines',
+                  'Brand Narrative',
+                  'Name Generation',
+                  'Logo',
+                  'Taglines',
+                  'Business Cards',
+                  'Exhibits & Displays',
+                  'Annual Reports',
+                  'Newsletters',
+                  'PowerPoint Templates',
+                  'Signage',
+                  'Stationery'
+                ]
+              },
+              {
+                name: 'Investor Relations',
+                subitems: [
+                  'Corporate Messaging',
+                  'Fact Sheets',
+                  'Tradeshow Booths',
+                  'Investor Roadshows',
+                  'Media Relations',
+                  'Awareness Campaigns',
+                  'Presentations',
+                  'Press Releases',
+                  'Competitive Analysis',
+                  'Investor Targeting',
+                  'Conferences'
+                ]
+              },
+              {
+                name: 'Marketing',
+                subitems: [
+                  'Billboards',
+                  'Budgeting and Planning',
+                  'Direct Mail',
+                  'Print Ads',
+                  'Brand Positioning',
+                  'Copywriting/Editing',
+                  'E-Newsletters',
+                  'Printing Solutions'
+                ]
+              },
+              {
+                name: 'Digital',
+                subitems: [
+                  'Digital Marketing',
+                  'SEM/SEO',
+                  'Retargeting & Cross-device',
+                  'Domain/DNS/Hosting',
+                  'UX/UI Design',
+                  'Microsites',
+                  'Video',
+                  'Social Media',
+                  'Lead Pages',
+                  'Analytics Reporting & Monitoring',
+                  'Website Design'
+                ]
+              }
+            ]
+          each item in items
+            li.what__item= item.name
+              ul.what__sublist
+                each subitem in item.subitems
+                  li.what__subitem= subitem
+        .what-slider#what-slider
+          each item in items
+            .what-slider__slide
+              ul.what-slider__list
+                each subitem in item.subitems
+                  li.what-slider__item= subitem
+              h3.what-slider__title= item.name

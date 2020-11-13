@@ -1,0 +1,9 @@
+extends ./templates/_base.pug
+
+block variables
+  - var pageName = 'case-new'
+  - var pageTitle = 'New Case | Catch'
+
+block body
+  include ./blocks/case-new/header/_header.pug
+  include ./blocks/case-new/main/_main.pug

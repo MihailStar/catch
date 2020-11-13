@@ -1,0 +1,7 @@
+mixin icon(name)
+  svg(
+    class=`icon-${name}`
+    aria-hidden='true'
+    focusable='false'
+  )&attributes(attributes)
+    use(xlink:href=`#icon-${name}`)/

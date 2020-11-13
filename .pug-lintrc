@@ -1,0 +1,34 @@
+{
+  "disallowAttributeConcatenation": true,
+  "disallowAttributeInterpolation": true,
+  "disallowBlockExpansion": true,
+  "disallowDuplicateAttributes": true,
+  "disallowLegacyMixinCall": true,
+  "disallowMultipleLineBreaks": true,
+  "disallowStringConcatenation": true,
+  "disallowStringInterpolation": true,
+  "disallowTagInterpolation": true,
+  "disallowTrailingSpaces": true,
+  "requireClassLiteralsBeforeAttributes": true,
+  "requireClassLiteralsBeforeIdLiterals": true,
+  "requireIdLiteralsBeforeAttributes": true,
+  "requireLineFeedAtFileEnd": true,
+  "requireLowerCaseTags": true,
+  "requireSpaceAfterCodeOperator": true,
+  "requireSpecificAttributes": [
+    {
+      "img": [
+        "src",
+        "alt"
+      ]
+    }
+  ],
+  "requireStrictEqualityOperators": true,
+  "validateAttributeQuoteMarks": "'",
+  "validateDivTags": true,
+  "validateExtensions": true,
+  "validateIndentation": 2,
+  "validateLineBreaks": "LF",
+  "validateSelfClosingTags": true,
+  "validateTemplateString": true
+}

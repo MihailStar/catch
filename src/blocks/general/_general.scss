@@ -1,0 +1,114 @@
+.general {
+  &__column {
+    &_center {
+      padding-top: 38px;
+      padding-bottom: 14px;
+      @include grid-offset(
+        (
+          xs: null,
+          sm: null,
+          md: null,
+          lg: 1,
+          xl: null,
+        )
+      );
+      @include grid-col(
+        (
+          xs: 12,
+          sm: null,
+          md: null,
+          lg: 10,
+          xl: null,
+        )
+      );
+      @include media('>=md') {
+        padding-top: 88px;
+        padding-bottom: 40px;
+      }
+
+      & > :last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__title {
+    $font-size: 65px;
+    margin-top: 0;
+    margin-bottom: (6px / $font-size * 1em);
+    color: #f32735;
+    text-transform: uppercase;
+    letter-spacing: (0.47px / $font-size * 1em);
+    font-weight: 900;
+    font-size: ($font-size - 8 * 4);
+    font-family: 'Mont', sans-serif;
+    line-height: normal;
+    @include media('>=md') {
+      font-size: ($font-size - 8 * 3);
+    }
+    @include media('>=lg') {
+      letter-spacing: (0.94px / $font-size * 1em);
+      font-size: ($font-size - 8 * 2);
+    }
+    @include media('>=xl') {
+      font-size: ($font-size - 8 * 1);
+    }
+    @include media('>=1300px') {
+      font-size: $font-size;
+    }
+  }
+
+  &__subtitle {
+    $font-size: 22px;
+    margin-top: (24px / $font-size * 1em);
+    margin-bottom: (12px / $font-size * 1em);
+    color: #000b8c;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: $font-size - 2;
+    font-family: 'Mont', sans-serif;
+    line-height: 1em;
+    @include media('>=sm') {
+      font-size: $font-size - 1.5;
+    }
+    @include media('>=md') {
+      font-size: $font-size - 1;
+    }
+    @include media('>=lg') {
+      font-size: $font-size - 0.5;
+    }
+    @include media('>=xl') {
+      font-size: $font-size;
+    }
+  }
+
+  &__description,
+  &__text {
+    $font-size: 18px;
+    margin-top: 0;
+    margin-bottom: (22px / $font-size * 1em);
+    color: #161615;
+    letter-spacing: (0.94px / $font-size * 1em);
+    font-weight: 500;
+    font-size: $font-size - 2;
+    font-family: 'Mont', sans-serif;
+    line-height: 1.46667em;
+    @include media('>=sm') {
+      font-size: $font-size - 1.5;
+    }
+    @include media('>=md') {
+      font-size: $font-size - 1;
+    }
+    @include media('>=lg') {
+      font-size: $font-size - 0.5;
+    }
+    @include media('>=xl') {
+      font-size: $font-size;
+    }
+  }
+
+  &__description {
+    $font-size: 18px;
+    margin-bottom: (34px / $font-size * 1em);
+  }
+}

@@ -1,0 +1,29 @@
+$grid: map-merge(
+  $grid,
+  (
+    breakpoints: $breakpoints,
+    container: 7px,
+    gap: 7px,
+  )
+);
+
+.grid {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 23px;
+  padding-left: 23px;
+  max-width: (93px * 12 + 14px * 13);
+  width: 100%;
+  @include media('>=md') {
+    padding-right: 46px;
+    padding-left: 46px;
+  }
+  @include media('>=xl') {
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+
+  &__row {
+    @include grid-row();
+  }
+}

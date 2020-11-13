@@ -1,0 +1,12 @@
+body(class='body')
+  script.
+    document.documentElement.className =
+      document.documentElement.className.replace('no-js', 'js');
+  include ../blocks/sidebar/_sidebar.pug
+  include ../blocks/navigation/_navigation.pug
+  block body
+  include ../blocks/footer/_footer.pug
+  include ../blocks/sprite/_sprite.pug
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js' defer)
+  block script
+  script(src='./scripts/main.min.js' defer)

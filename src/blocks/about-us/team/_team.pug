@@ -1,0 +1,59 @@
+section.team(data-aos='fade-up')
+  .grid
+    .grid__row
+      .team__column.team__column_center
+        h2.team__title Our Driving <br> Forces
+        ul.team__list
+          -
+            var items = [
+              {
+                title: 'Elina Chow',
+                description: 'Principal + Founder'
+              },
+              {
+                title: 'Carrie Howe',
+                description: 'Partner'
+              },
+              {
+                title: 'Andy Chan',
+                description: 'Operations'
+              },
+              {
+                title: 'Charles Liu',
+                description: 'Controler'
+              },
+              {
+                title: 'Aramis Perez',
+                description: 'Senior Graphic Designer'
+              },
+              {
+                title: 'Martin Mendoza',
+                description: 'Doesn\'t Do Anything'
+              },
+              {
+                title: 'Christie Kwan',
+                description: 'Graphic Designer'
+              },
+              {
+                title: 'Ryan Unwin',
+                description: 'Graphic Designer'
+              },
+              {
+                title: 'Christy Au-Yeung',
+                description: 'Project Coordinator'
+              },
+              {
+                title: 'Daenielle White',
+                description: 'Project Coordinator'
+              }
+            ]
+          each item in items
+            - var { title, description } = item
+            li.team__item
+              img.team__image(
+                srcset='./images/content/about-us.jpg 1x, ./images/content/about-us@2x.jpg 1.5x'
+                src='./images/content/about-us.jpg'
+                alt=`${title} - ${description}`
+              )
+              h3.team__subtitle= title
+              b.team__subdescription= description

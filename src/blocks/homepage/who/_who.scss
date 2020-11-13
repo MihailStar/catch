@@ -1,0 +1,154 @@
+.who {
+  overflow: hidden;
+  @include media('>=lg') {
+    padding: 5em 0;
+  }
+
+  &__column {
+    &_start {
+      padding-top: 42px;
+      padding-bottom: 0;
+      @include grid-offset(
+        (
+          xs: null,
+          sm: null,
+          md: null,
+          lg: 1,
+          xl: null,
+        )
+      );
+      @include grid-col(
+        (
+          xs: 12,
+          sm: null,
+          md: 6,
+          lg: 5,
+          xl: null,
+        )
+      );
+      @include media('>=md') {
+        padding-top: 124px;
+        padding-bottom: 124px;
+      }
+    }
+
+    &_end {
+      padding-top: 20px;
+      padding-bottom: 68px;
+      @include grid-offset(
+        (
+          xs: 5,
+          sm: null,
+          md: 0,
+          lg: null,
+          xl: null,
+        )
+      );
+      @include grid-col(
+        (
+          xs: 6,
+          sm: null,
+          md: 6,
+          lg: null,
+          xl: null,
+        )
+      );
+      @include media('>=md') {
+        padding-top: 68px;
+        padding-bottom: 68px;
+      }
+      @include media('>=lg') {
+        padding-bottom: 78px;
+      }
+    }
+  }
+
+  &__description {
+    $font-size: 22px;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #666dba;
+    font-weight: 500;
+    font-size: $font-size - 4;
+    font-family: 'Mont', sans-serif;
+    line-height: normal;
+    @include media('>=md') {
+      margin-bottom: (14px / $font-size * 1em);
+    }
+    @include media('>=lg') {
+      font-size: $font-size - 2;
+    }
+    @include media('>=xl') {
+      font-size: $font-size;
+    }
+  }
+
+  &__title {
+    $font-size: 41px;
+    margin-top: 0;
+    margin-bottom: (34px / $font-size * 1em);
+    max-width: (93px * 4 + 14px * 3);
+    color: #000b8c;
+    text-transform: uppercase;
+    letter-spacing: (0.6px / $font-size * 1em);
+    font-weight: 900;
+    font-size: $font-size - 8;
+    font-family: 'Mont', sans-serif;
+    line-height: 1em;
+    @include media('>=sm') {
+      font-size: $font-size - 6;
+    }
+    @include media('>=md') {
+      margin-bottom: (98px / $font-size * 1em);
+      font-size: $font-size - 4;
+      line-height: (45px / $font-size * 1em);
+    }
+    @include media('>=lg') {
+      font-size: $font-size - 2;
+    }
+    @include media('>=xl') {
+      font-size: $font-size;
+    }
+  }
+
+  &__image {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      bottom: -68px;
+      left: -208px;
+      width: (518px / 2);
+      height: (540px / 2);
+      background-image: url('../images/rocks.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      content: '';
+      transform: rotate(120deg);
+      @include media('>=sm') {
+        content: none;
+      }
+      @include media('>=lg') {
+        top: -68px;
+        left: 214px;
+        width: 518px;
+        height: 540px;
+        background-size: auto;
+        content: '';
+        transform: rotate(0deg);
+      }
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      width: 306px;
+      height: auto;
+      border-radius: 4px;
+      box-shadow: 22px -10px 0 0 #f32735;
+      @include media('>=md') {
+        box-shadow: 46px -22px 0 0 #f32735;
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+section.cases(data-aos='fade-up')
+  .grid
+    .grid__row
+      .cases__column.cases__column_center
+        ul.cases__list
+          -
+            var items = [
+              {
+                description: 'Web & UI/UX',
+                title: 'Goat Risk Solutions',
+                modifier: 'blue'
+              },
+              {
+                description: 'Branding',
+                title: 'First Cobalt',
+                modifier: 'red'
+              },
+              {
+                description: 'Presentation',
+                title: 'Celsius Resources',
+                modifier: 'green'
+              },
+              {
+                description: 'Video',
+                title: 'Revival Gold',
+                modifier: 'yellow'
+              }
+            ]
+          each item in items
+            li.cases__item
+              header.cases__header
+                b.cases__description(
+                  class=`cases__description_${item.modifier}`
+                )
+                  span= item.description
+                h2.cases__title= item.title
+              a.cases__link(href='javascript:void(0);')
+                img.cases__image(
+                  srcset='https://via.placeholder.com/628x470/d8d8d8/d8d8d8 1x, https://via.placeholder.com/1256x940/d8d8d8/d8d8d8 1.5x'
+                  src='https://via.placeholder.com/628x470/d8d8d8/d8d8d8'
+                  alt=item.title
+                )
+                .cases__overlay
+                  span Coming
+                  span Soon

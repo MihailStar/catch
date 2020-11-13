@@ -1,0 +1,11 @@
+extends ./templates/_base.pug
+
+block variables
+  - var pageName = 'homepage'
+  - var pageTitle = 'Homepage | Catch'
+
+block body
+  include ./blocks/homepage/header/_header.pug
+  include ./blocks/homepage/who/_who.pug
+  include ./blocks/homepage/what/_what.pug
+  include ./blocks/homepage/clients/_clients.pug

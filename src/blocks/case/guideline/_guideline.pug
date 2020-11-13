@@ -1,0 +1,129 @@
+section.guideline(data-aos='fade-up')
+  .grid
+    .grid__row
+      .guideline__column.guideline__column_left
+        figure.guideline__figure.guideline__figure_brand-guideline
+          .guideline__image
+            img(
+              srcset='https://via.placeholder.com/948x530/d8d8d8/d8d8d8 1x, https://via.placeholder.com/1896x1060/d8d8d8/d8d8d8 1.5x'
+              src='https://via.placeholder.com/948x530/d8d8d8/d8d8d8'
+              alt='Brand Guideline'
+            )
+          figcaption Brand Guideline
+      .guideline__column.guideline__column_right
+
+    .grid__row
+      .guideline__column.guideline__column_start
+        .colors
+          h2.guideline__title.guideline__title_colors
+            span Colors
+          ul.colors__list
+            -
+              var colors =  [
+                {
+                  hex: '#E1B93C',
+                  rgb: '225 / 185 / 60',
+                  cmyk: '13 / 25 / 90 / 00',
+                  pms: '142C',
+                  text: '#161615'
+                },
+                {
+                  hex: '#000000',
+                  rgb: '35 / 31 / 32',
+                  cmyk: '00 / 00 / 00 / 100',
+                  text: '#fbfbfb'
+                },
+                {
+                  hex: '#C2C5C8',
+                  rgb: '109 / 110 / 113',
+                  cmyk: '00 / 00 / 00 / 70',
+                  text: '#161615'
+                },
+                {
+                  hex: '#707271',
+                  rgb: '188 / 190 / 192',
+                  cmyk: '00 / 00 / 00 / 30',
+                  text: '#fbfbfb'
+                }
+              ]
+            each color in colors
+              li.colors__item
+                .colors__color(
+                  style=`
+                    background-color: ${color.hex.toLowerCase()};
+                    color: ${color.text.toLowerCase()};
+                  `
+                )
+                  b= color.hex
+                table.colors__table
+                  tr.colors__tr
+                    td.colors__td RGB
+                    td.colors__td= color.rgb
+                  tr.colors__tr
+                    td.colors__td CMYK
+                    td.colors__td= color.cmyk
+                  if (color.pms)
+                    tr.colors__tr
+                      td.colors__td PMS
+                      td.colors__td= color.pms
+        .typography
+          h2.guideline__title.guideline__title_typography
+            span Typography
+          -
+            var fonts = [
+              {
+                name: 'Ubuntu Condensed',
+                use: 'Primary Heading',
+                modifier: 'ubuntu-condensed'
+              },
+              {
+                name: 'Proxima Nova',
+                use: 'Body Text',
+                modifier: 'proxima-nova'
+              }
+            ]
+          each font in fonts
+            .typography__font
+              .typography__symbols(
+                class=`typography__symbols_${font.modifier}`
+              )
+                -
+                  var symbols = [
+                    'A','B','C','D','E','F','G','H','I','J','K','L','M',
+                    'N','O','P','Q','R','S','T','U','V','W','X','Y','Z',
+                    'a','b','c','d','e','f','g','h','i','j','k','l','m',
+                    'n','o','p','q','r','s','t','u','v','w','x','y','z',
+                    '1','2','3','4','5','6','7','8','9','0','!','@','#',
+                    '$','%','^','&','*','(',')','-','=','_','+','?','/'
+                  ]
+                each symbol in symbols
+                  span= symbol
+              .typography__symbols(
+                class=`typography__symbols_${font.modifier}`
+              )
+                -
+                  var symbols = [
+                    'A','B','C','D','E','F','G','H','I','J','K','L','M',
+                    'N','O','P','Q','R','S','T','U','V','W','X','Y','Z'
+                  ]
+                each symbol in symbols
+                  span= `${symbol.toUpperCase()}${symbol.toLowerCase()} `
+              .typography__wrapper
+                h3.typography__title= font.name
+                p.typography__description= font.use
+
+      .guideline__column.guideline__column_end
+        figure.guideline__figure.guideline__figure_business-card
+          img(
+            srcset='https://via.placeholder.com/413x370/d8d8d8/d8d8d8 1x, https://via.placeholder.com/826x740/d8d8d8/d8d8d8 1.5x'
+            src='https://via.placeholder.com/413x370/d8d8d8/d8d8d8'
+            alt='Business Card'
+          )
+          figcaption Business Card
+        figure.guideline__figure.guideline__figure_fact-sheet
+          img(
+            srcset='https://via.placeholder.com/413x534/d8d8d8/d8d8d8 1x, https://via.placeholder.com/826x1068/d8d8d8/d8d8d8 1.5x'
+            src='https://via.placeholder.com/413x534/d8d8d8/d8d8d8'
+            alt='Fact Sheet'
+          )
+          figcaption Fact Sheet

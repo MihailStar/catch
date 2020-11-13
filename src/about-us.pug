@@ -1,0 +1,11 @@
+extends ./templates/_base.pug
+
+block variables
+  - var pageName = 'about-us'
+  - var pageTitle = 'About Us | Catch'
+
+block body
+  include ./blocks/about-us/header/_header.pug
+  include ./blocks/about-us/about/_about.pug
+  include ./blocks/about-us/team/_team.pug
+  include ./blocks/about-us/career/_career.pug

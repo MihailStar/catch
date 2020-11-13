@@ -1,0 +1,77 @@
+.about {
+  &__column {
+    &_center {
+      padding-top: 68px;
+      padding-bottom: 102px;
+      @include grid-offset(
+        (
+          xs: null,
+          sm: null,
+          md: null,
+          lg: 1,
+          xl: 2,
+        )
+      );
+      @include grid-col(
+        (
+          xs: 12,
+          sm: null,
+          md: null,
+          lg: 10,
+          xl: 8,
+        )
+      );
+      @include media('>=lg') {
+        padding-top: 144px;
+        padding-bottom: 182px;
+      }
+    }
+  }
+
+  &__title {
+    $font-size: 22px;
+    margin-top: 0;
+    margin-bottom: (6px / $font-size * 1em);
+    color: #000b8c;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: $font-size - 2;
+    font-family: 'Mont', sans-serif;
+    line-height: (25px / $font-size * 1em);
+    @include media('>=sm') {
+      font-size: $font-size - 1.5;
+    }
+    @include media('>=md') {
+      font-size: $font-size - 1;
+    }
+    @include media('>=lg') {
+      font-size: $font-size - 0.5;
+    }
+    @include media('>=xl') {
+      font-size: $font-size;
+    }
+  }
+
+  &__description {
+    $font-size: 22px;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #161615;
+    font-weight: 500;
+    font-size: $font-size - 6;
+    font-family: 'Mont', sans-serif;
+    line-height: (30px / $font-size * 1em);
+    @include media('>=sm') {
+      font-size: $font-size - 4.5;
+    }
+    @include media('>=md') {
+      font-size: $font-size - 3;
+    }
+    @include media('>=lg') {
+      font-size: $font-size - 1.5;
+    }
+    @include media('>=xl') {
+      font-size: $font-size;
+    }
+  }
+}

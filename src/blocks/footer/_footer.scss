@@ -1,0 +1,210 @@
+.footer {
+  background-color: #fbfbfb;
+
+  &__column {
+    &_start {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      @include grid-col(
+        (
+          xs: 10,
+          sm: null,
+          md: 4,
+          lg: 3,
+          xl: null,
+        )
+      );
+      @include media('>=sm') {
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+      @include media('>=md') {
+        padding-top: 60px;
+        padding-bottom: 60px;
+      }
+      @include media('>=xl') {
+        padding-bottom: 46px;
+      }
+    }
+
+    &_center {
+      display: none;
+      align-items: flex-end;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      @include grid-col(
+        (
+          xs: null,
+          sm: null,
+          md: 5,
+          lg: 6,
+          xl: null,
+        )
+      );
+      @include media('>=sm') {
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+      @include media('>=md') {
+        display: flex;
+        padding-top: 60px;
+        padding-bottom: 60px;
+      }
+      @include media('>=xl') {
+        padding-bottom: 46px;
+      }
+    }
+
+    &_end {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      @include grid-col(
+        (
+          xs: 2,
+          sm: null,
+          md: 3,
+          lg: null,
+          xl: null,
+        )
+      );
+      @include media('>=sm') {
+        justify-content: flex-end;
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+      @include media('>=md') {
+        padding-top: 60px;
+        padding-bottom: 60px;
+      }
+      @include media('>=xl') {
+        justify-content: center;
+        padding-bottom: 46px;
+      }
+    }
+  }
+
+  &__title {
+    $font-size: 13px;
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #2b2b2b;
+    letter-spacing: (0.19px / $font-size * 1em);
+    font-weight: 500;
+    font-size: $font-size;
+    font-family: 'Mont', sans-serif;
+    line-height: (13px / $font-size * 1em);
+    @include media('>=sm') {
+      $font-size: 16px;
+      font-size: $font-size - 2;
+      line-height: (25px / $font-size * 1em);
+    }
+    @include media('>=md') {
+      display: none;
+    }
+  }
+
+  &__link {
+    $font-size: 13px;
+    display: inline-block;
+    margin-bottom: 0;
+    color: #000b8c;
+    font-weight: 500;
+    font-size: $font-size;
+    font-family: 'Mont', sans-serif;
+    line-height: (13px / $font-size * 1em);
+    transition: text-decoration-color $transition-duration;
+    text-decoration-color: transparent;
+    @include media('>=sm') {
+      $font-size: 16px;
+      font-size: $font-size - 2;
+      line-height: (25px / $font-size * 1em);
+    }
+    @include media('>=md') {
+      margin-bottom: (6px / $font-size * 1em);
+      font-size: $font-size - 1;
+    }
+    @include media('>=lg') {
+      font-size: $font-size;
+    }
+
+    &:hover,
+    &:focus {
+      outline: none;
+      text-decoration-color: currentColor;
+    }
+
+    &_privacy-policy {
+      margin-bottom: 0;
+      color: #414040;
+
+      &:hover,
+      &:focus {
+        outline: none;
+        text-decoration-color: currentColor;
+      }
+    }
+  }
+
+  &__address {
+    $font-size: 16px;
+    display: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #414040;
+    font-weight: 500;
+    font-size: $font-size - 1;
+    font-family: 'Mont', sans-serif;
+    line-height: (25px / $font-size * 1em);
+    @include media('>=md') {
+      display: block;
+    }
+    @include media('>=lg') {
+      font-size: $font-size;
+    }
+  }
+
+  &__logotype {
+    img,
+    svg {
+      max-width: 100%;
+      height: auto;
+    }
+
+    img {
+      display: none;
+      width: 235px;
+      @include media('>=md') {
+        display: block;
+      }
+    }
+
+    svg {
+      display: block;
+      width: 32px;
+      height: 32px;
+      @include media('>=sm') {
+        width: 42px;
+        height: 42px;
+      }
+      @include media('>=md') {
+        display: none;
+      }
+    }
+
+    path {
+      transition: fill $transition-duration;
+
+      &:nth-of-type(1) {
+        fill: #f32735;
+      }
+
+      &:nth-of-type(2) {
+        fill: #000b8c;
+      }
+    }
+  }
+}

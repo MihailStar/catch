@@ -1,0 +1,103 @@
+.case-new-header {
+  &__column {
+    &_center {
+      $grid-padding: 7px;
+      $padding-right: 90px;
+      padding-top: 36px;
+      padding-right: ($grid-padding + $padding-right - 64);
+      padding-bottom: 36px;
+      padding-left: $grid-padding;
+      width: 100%;
+
+      @include media('>=sm') {
+        padding-right: ($grid-padding + $padding-right - 48);
+      }
+
+      @include media('>=md') {
+        padding-right: ($grid-padding + $padding-right - 32);
+      }
+
+      @include media('>=lg') {
+        padding-right: ($grid-padding + $padding-right - 16);
+      }
+
+      @include media('>=xl') {
+        padding-right: ($grid-padding + $padding-right);
+      }
+    }
+  }
+
+  &__table-wrapper {
+    overflow: auto;
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  &__th {
+    $font-size: 16px;
+    padding-top: 6px;
+    padding-right: 6px;
+    padding-bottom: 6px;
+    padding-left: 6px;
+    width: 25%;
+    color: #aeadab;
+    text-align: left;
+    font-weight: 500;
+    font-size: ($font-size - 2);
+    font-family: 'Mont', sans-serif;
+    line-height: 1.2;
+
+    @include media('>=sm') {
+      font-size: ($font-size - 1.5);
+    }
+
+    @include media('>=md') {
+      font-size: ($font-size - 1);
+    }
+
+    @include media('>=lg') {
+      font-size: ($font-size - 0.5);
+    }
+
+    @include media('>=xl') {
+      font-size: $font-size;
+
+      &:not(:last-child) {
+        width: 27%;
+      }
+    }
+  }
+
+  &__td {
+    $font-size: 30px;
+    padding-top: 6px;
+    padding-right: 6px;
+    padding-bottom: 6px;
+    padding-left: 6px;
+    color: #000000;
+    vertical-align: top;
+    font-weight: 500;
+    font-size: ($font-size - 12);
+    font-family: 'Mont', sans-serif;
+    line-height: 1.2;
+
+    @include media('>=sm') {
+      font-size: ($font-size - 9);
+    }
+
+    @include media('>=md') {
+      font-size: ($font-size - 6);
+    }
+
+    @include media('>=lg') {
+      font-size: ($font-size - 3);
+    }
+
+    @include media('>=xl') {
+      font-size: $font-size;
+    }
+  }
+}

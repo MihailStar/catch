@@ -1,0 +1,117 @@
+.header-about-us {
+  margin-top: -70px;
+  min-height: 100vh;
+  background-color: #f32735;
+  box-shadow: 0 -70px 0 0 #f32735;
+  @include media('>=lg') {
+    margin-top: 0;
+    box-shadow: -80px 0 0 0 #f32735;
+  }
+  @include media('>=xl') {
+    box-shadow: -84px 0 0 0 #f32735;
+  }
+
+  &__column {
+    &_center {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      padding-top: 0;
+      padding-bottom: 0;
+      min-height: 100vh;
+      background-image: none;
+      background-position: right 60px top 50%;
+      background-size: 150px 100%;
+      background-repeat: no-repeat;
+      @include grid-offset(
+        (
+          xs: null,
+          sm: 1,
+          md: null,
+          lg: 2,
+          xl: 3,
+        )
+      );
+      @include grid-col(
+        (
+          xs: 12,
+          sm: 10,
+          md: null,
+          lg: 8,
+          xl: 7,
+        )
+      );
+      @include media('>=md') {
+        background-image: url('../images/lines-white.svg');
+      }
+    }
+  }
+
+  &__wrapper {
+    width: 100%;
+  }
+
+  &__title {
+    $font-size: 65px;
+    margin-top: 0;
+    margin-bottom: (24px / $font-size * 1em);
+    padding: (36px / $font-size * 1em) (40px / $font-size * 1em)
+      (30px / $font-size * 1em);
+    width: 100%;
+    border-radius: 4px;
+    background-color: #fbfbfb;
+    background-image: none;
+    background-position: right (60px - 7) top 50%;
+    background-size: 150px auto;
+    background-repeat: no-repeat;
+    color: #f32735;
+    text-transform: uppercase;
+    letter-spacing: (0.47px / $font-size * 1em);
+    font-weight: 900;
+    font-size: ($font-size - 8 * 4);
+    font-family: 'Mont', sans-serif;
+    line-height: (65px / $font-size * 1em);
+    @include media('>=md') {
+      background-image: url('../images/lines-red.svg');
+      font-size: ($font-size - 8 * 3);
+    }
+    @include media('>=lg') {
+      letter-spacing: (0.94px / $font-size * 1em);
+      font-size: ($font-size - 8 * 2);
+    }
+    @include media('>=xl') {
+      font-size: ($font-size - 8 * 1);
+    }
+    @include media('>=1300px') {
+      font-size: $font-size;
+    }
+  }
+
+  &__description {
+    $font-size: 65px;
+    position: absolute;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: (50px / $font-size * 1em);
+    color: rgba(#fbfbfb, 0.6);
+    text-transform: lowercase;
+    letter-spacing: (0.47px / $font-size * 1em);
+    font-weight: 500;
+    font-size: ($font-size - 8 * 4);
+    font-family: 'Mont', sans-serif;
+    line-height: 1.5em;
+    @include media('>=md') {
+      font-size: ($font-size - 8 * 3);
+    }
+    @include media('>=lg') {
+      letter-spacing: (0.94px / $font-size * 1em);
+      font-size: ($font-size - 8 * 2);
+    }
+    @include media('>=xl') {
+      font-size: ($font-size - 8 * 1);
+    }
+    @include media('>=1300px') {
+      font-size: $font-size;
+    }
+  }
+}
